@@ -1,84 +1,85 @@
-*
-{
-	padding: 0;
-	marging: 0;
-	box-sizing: border-box;
-}
-body
-{
-	background-image: url(background.jpg);
-	background-size: cover;
-	background-position: center;
-	
-	font-family: sans-serif;
-}
-.menu-bar
-{
-	background:rgb(0,100,1);
-	text-align: center;
-}
-.menu-bar ul 
-{
-	display: inline-flex;
-	list-style:none;
-	color: #fff;
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.menu-bar ul li
-{
-	width: 120px;
-	margin: 15px;
-	padding: 15px
+/* Body Styling */
+body {
+    background-image: url('background.jpg'); /* Ensure correct relative path */
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
 }
 
-.menu-bar ul li a
-{
-	text-decoration: none;
-	color: #fff;
-}
-.active,.menu-bar ul li a:hover
-{
-	background: #2bab0d;
-	border-radius: 3px;
+/* Menu Bar Styling */
+.menu-bar {
+    background: rgb(0, 100, 1);
+    text-align: center;
 }
 
-.menu-bar .fa
-{
-	margin-right: 8px;
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
 
+.menu-bar ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+    position: relative; /* Required for positioning dropdowns */
 }
-.sub-menu-1
-{
-	display: none;
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #fff;
 }
-.menu-bar ul li:hover .sub-menu-1 
-{
-    display: block;
-    position: absolute;
+
+/* Active and Hover States */
+.active, .menu-bar ul li a:hover {
+    background: #2bab0d;
+    border-radius: 3px;
+}
+
+/* Font Awesome Icon Styling */
+.menu-bar .fa {
+    margin-right: 8px;
+}
+
+/* Submenu Styling */
+.sub-menu-1 {
+    display: none;
+    position: absolute; /* Dropdown position */
     background: rgb(0, 100, 0);
     margin-top: 15px;
-    margin-left: -15px;
-}
-.menu-bar ul li:hover .sub-menu-1 ul
-{
-    display: block;
-    margin: 10px
+    margin-left: -15px; /* Align dropdown with parent */
+    z-index: 1000; /* Ensure visibility above other elements */
 }
 
-.menu-bar ul li:hover .sub-menu-1 ul li
-{
-	width: 150px;
-	padding: 10px;
-	border-bottom:1px dotted #fff;
-	background: transparent;
-	border-radius: 0;
-	text-align:left;
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
 }
-.menu-bar ul li:hover .sub-menu-1 ul li:last-child
-{
-	border-bottom:none;
+
+.sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+    padding: 0; /* Remove padding for better alignment */
 }
-.menu-bar ul li:hover .sub-menu-1 ul li a:hover
-{
-	color:#b2ff00;
+
+.sub-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    text-align: left;
+}
+
+.sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.sub-menu-1 ul li a:hover {
+    color: #b2ff00;
 }
