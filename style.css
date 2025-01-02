@@ -7,7 +7,7 @@
 
 /* Body Styling */
 body {
-    background-image: url('background.jpg'); /* Ensure correct relative path */
+    background-image: url('https://raw.githubusercontent.com/mjc174/MJC-Technologies-Ltd/main/background.jpg'); /* Ensure correct relative path */
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
